@@ -1,4 +1,3 @@
-import React, {useState,Suspense} from 'react'
 import { Html, useProgress } from '@react-three/drei'
 
 

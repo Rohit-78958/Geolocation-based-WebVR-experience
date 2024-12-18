@@ -1,6 +1,5 @@
 import { Canvas } from '@react-three/fiber'
 import React, {useState,Suspense} from 'react'
-import { Html, useProgress } from '@react-three/drei'
 import GlobeScene from './components/Globe'
 import PlantScene from './components/PlantScene'
 import Loader from './components/Loader'

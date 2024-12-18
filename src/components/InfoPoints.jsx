@@ -1,4 +1,3 @@
-import { useThree } from '@react-three/fiber'
 import React, { useRef, useState, useCallback } from 'react'
 import { Html } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
