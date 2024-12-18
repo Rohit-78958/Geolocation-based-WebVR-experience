@@ -25,7 +25,7 @@ const GlobeWithClouds = () => {
   const bumpTexture = useTexture('https://unpkg.com/three-globe/example/img/earth-topology.png');
 
   useEffect(() => {
-    new THREE.TextureLoader().load('./clouds.png', setCloudsTexture);
+    new THREE.TextureLoader().load('/images/clouds.png', setCloudsTexture);
   }, []);
 
   return (
@@ -44,8 +44,8 @@ const GlobeWithClouds = () => {
       {/* Clouds */}
       {cloudsTexture && (
         <mesh>
-          <sphereGeometry args={[2.02, 75, 75]} />
-          <meshPhongMaterial map={cloudsTexture} transparent opacity={0.6} />
+          <sphereGeometry args={[3.01, 75, 75]} />
+          <meshPhongMaterial map={cloudsTexture} transparent opacity={0.8} />
         </mesh>
       )}
     </>
@@ -101,7 +101,7 @@ const GlobeScene = ({ onSwitchToPlantScene }) => {
   return (
     <>
       {/* Lighting */}
-      <ambientLight intensity={0.5} />
+      <ambientLight intensity={2} />
       <pointLight position={[10, 10, 10]} intensity={1.5} />
 
       {/* Controls */}

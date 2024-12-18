@@ -24,7 +24,7 @@ const InfoPoint = ({ position, info, imageUrl, onClick }) => {
   })
 
   return (
-    <group position={position} scale={0.15}>
+    <group position={position} scale={0.18}>
       <mesh
         ref={sphereRef}
         onPointerOver={() => setHovered(true)}
