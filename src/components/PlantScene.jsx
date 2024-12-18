@@ -47,25 +47,25 @@ export default function PlantScene({onBack}) {
             </button>
           </Html>
 
-          <ImagePlane position={[80, 7, -30]} />
+          <ImagePlane position={[82, 7, -30]} />
           {/* <mesh position={[50, 1, -55]} rotation={[0, 0, 0]} receiveShadow>
             <cylinderGeometry args={[10, 10, 1, 64]} />
             <meshStandardMaterial color="white" />
           </mesh> */}
 
-          <ImagePlane position={[80, 7, -15]} />
+          <ImagePlane position={[82, 7, -15]} />
           {/* <mesh position={[40, 1, -108]} rotation={[0, 0, 0]} receiveShadow>
             <cylinderGeometry args={[10, 10, 1, 64]} />
             <meshStandardMaterial color="white" />
           </mesh> */}
 
-          <ImagePlane position={[80, 7, 0]} />
+          <ImagePlane position={[82, 7, 0]} />
           {/* <mesh position={[10, 1, -108]} rotation={[0, 0, 0]} receiveShadow>
             <cylinderGeometry args={[10, 10, 1, 64]} />
             <meshStandardMaterial color="white" />
           </mesh> */}
 
-          <ImagePlane position={[80, 7, 15]} />
+          <ImagePlane position={[82, 7, 15]} />
           {/* <mesh position={[-20, 1, -108]} rotation={[0, 0, 0]} receiveShadow>
             <cylinderGeometry args={[10, 10, 1, 64]} />
             <meshStandardMaterial color="white" />

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Html } from '@react-three/drei';
 
-function LiveDataDisplay({ machineID, distanceFactor = 8, position}) {
+function LiveDataDisplay({ machineID, distanceFactor = 10, position}) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
@@ -39,23 +39,23 @@ function LiveDataDisplay({ machineID, distanceFactor = 8, position}) {
     <Html distanceFactor={distanceFactor} position={position}>
       <div className="bg-white/90 p-4 rounded-lg shadow-lg min-w-[350px]">
         {/* Machine Name */}
-        <h2 className="text-4xl font-bold text-center mb-3">
+        <h2 className="text-5xl font-bold text-center mb-3">
           {/* {machineNames[machineID] || `Machine ${machineID}`} */}
           Rohit
         </h2>
       </div>
       <div className="bg-white/90 p-4 rounded-lg shadow-lg min-w-[200px]">
         {error ? (
-          <div className="text-red-500 text-sm">{error}</div>
+          <div className="text-red-500 text-2xl">{error}</div>
         ) : !data ? (
-          <div className="text-gray-500 text-md">Loading...</div>
+          <div className="text-gray-500 text-2xl">Loading...</div>
         ) : (
-          <div className="text-sm">
+          <div className="text-2xl">
             <h3 className="font-bold mb-2 text-center text-2xl">Live Machine Data</h3>
             <div className="space-y-1">
               {Object.entries(data).map(([key, value]) => (
                 <div key={key} className="flex justify-between">
-                  <span className="font-medium text-xl">{keys[key]}:</span>
+                  <span className="font-medium text-2xl">{keys[key]}:</span>
                   <span>{value}</span>
                 </div>
               ))}
