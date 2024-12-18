@@ -109,6 +109,7 @@ const GlobeScene = ({ onSwitchToPlantScene }) => {
       minDistance={3.1} 
       maxDistance={5.5} 
       rotateSpeed={0.25} 
+      autoRotate
       />
 
       {/* Stars Background */}
