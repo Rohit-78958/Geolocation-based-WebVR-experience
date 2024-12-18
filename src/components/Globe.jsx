@@ -25,7 +25,7 @@ const GlobeWithClouds = () => {
   const bumpTexture = useTexture('https://unpkg.com/three-globe/example/img/earth-topology.png');
 
   useEffect(() => {
-    new THREE.TextureLoader().load('/images/clouds.png', setCloudsTexture);
+    new THREE.TextureLoader().load('images/clouds.png', setCloudsTexture);
   }, []);
 
   return (
