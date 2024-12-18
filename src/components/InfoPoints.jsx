@@ -25,7 +25,7 @@ const InfoPoint = ({ position, info, imageUrl, onClick }) => {
   })
 
   return (
-    <group position={position} scale={0.1}>
+    <group position={position} scale={0.15}>
       <mesh
         ref={sphereRef}
         onPointerOver={() => setHovered(true)}
@@ -35,7 +35,7 @@ const InfoPoint = ({ position, info, imageUrl, onClick }) => {
         <sphereGeometry args={[0.2, 8, 8]} />
         <meshBasicMaterial color={hovered ? 'red' : 'yellow'} />
         {hovered &&
-          <Html distanceFactor={2}>
+          <Html distanceFactor={4}>
             <div className="bg-white/90 p-2 rounded-lg shadow-lg">
               <p className="text-xs font-bold text-center">
                 {info}

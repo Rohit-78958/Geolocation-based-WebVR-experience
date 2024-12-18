@@ -3,15 +3,7 @@ import React, {useState,Suspense} from 'react'
 import { Html, useProgress } from '@react-three/drei'
 import GlobeScene from './components/ModelComponents/Globe'
 import PlantScene from './components/PlantScene'
-
-function Loader() {
-  const { progress } = useProgress()
-  return <Html center>
-  <div className='w-screen h-screen flex justify-center items-center text-white bg-zinc-800'>
-    {progress.toFixed(2)} % loaded
-  </div>
-</Html>
-}
+import Loader from './components/Loader'
 
 function App() {
   const [currentScene, setCurrentScene] = useState('globe')

@@ -2,18 +2,8 @@ import React, { useState, Suspense } from 'react';
 import { Stats, Environment, Html, useProgress, PerspectiveCamera, useTexture } from '@react-three/drei';
 import { Perf } from 'r3f-perf';
 import ImagePlane from './ImagePlane';
+import Loader from './Loader';
 import CameraLookAround from './CameraComponents/CameraLookAround';
-
-function Loader() {
-  const { progress } = useProgress();
-  return (
-    <Html center>
-      <div className='w-screen h-screen flex justify-center items-center text-white bg-zinc-800'>
-        {progress.toFixed(2)} % loaded
-      </div>
-    </Html>
-  );
-}
 
 function BackgroundImage() {
   const texture = useTexture('images/showroom.jpg');

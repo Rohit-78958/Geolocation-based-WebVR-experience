@@ -70,16 +70,6 @@ const GlobeScene = ({ onSwitchToPlantScene }) => {
   const handleInfoPointClick = useCallback((position) => {
     // Get the current camera direction
     const direction = position.map(coord => coord / Math.sqrt(position.reduce((sum, coord) => sum + coord * coord, 0)));
-    
-    // Calculate a closer position along the same line of sight
-    gsap.to(camera.position, {
-      duration: 1,
-      x: direction[0] * 2.5, // Reduced from 4 to 2.5 for closer zoom
-      y: direction[1] * 2.5,
-      z: direction[2] * 2.5,
-      ease: "power2.inOut",
-      onComplete: () => onSwitchToPlantScene()
-    });
 
     // Make camera look at the clicked point
     gsap.to(camera.lookAt, {
@@ -89,6 +79,17 @@ const GlobeScene = ({ onSwitchToPlantScene }) => {
       z: position[2],
       ease: "power2.inOut"
     });
+    
+    // Calculate a closer position along the same line of sight
+    gsap.to(camera.position, {
+      duration: 1.5,
+      x: direction[0] * 2.5, // Reduced from 4 to 2.5 for closer zoom
+      y: direction[1] * 2.5,
+      z: direction[2] * 2.5,
+      ease: "power2.inOut",
+      onComplete: () => onSwitchToPlantScene()
+    });
+
   }, [camera, onSwitchToPlantScene]);
 
   const pinpoints = [
@@ -106,7 +107,7 @@ const GlobeScene = ({ onSwitchToPlantScene }) => {
       {/* Controls */}
       <OrbitControls zoomSpeed={0.25} 
       minDistance={3.1} 
-      maxDistance={5} 
+      maxDistance={5.5} 
       rotateSpeed={0.25} 
       />
 
